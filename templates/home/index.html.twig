@@ -4,6 +4,8 @@
 
 {% block body %}
 
-    <h1>Bienvenu</h1>
-    
+    {# pour recuperer les information utilisateur une fois connecté en twig "donc dans un fichier twig" on passe pas app.user et on precise ici l'occurence pseudo #}
+    {# par contre si je voulais le faire dans un controller ou entity c'est :  $this->user #}
+    <h1>Bienvenu {{app.user.pseudo}}</h1>
+
 {% endblock %}
